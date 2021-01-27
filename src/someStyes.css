@@ -1,0 +1,10 @@
+.closeBtn{
+     margin-left: 60%;
+     padding: 5px;
+     border-radius: 20%;
+     text-decoration: none !important;
+     background-color: crimson;
+     border: 1px solid crimson;
+     cursor: pointer;
+     content: 'X';
+}

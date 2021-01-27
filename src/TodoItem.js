@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
-
+import './someStyes.css'
 
 function TodoItem (props){
      let [allProps] = useState(props.oneItem.item)
@@ -12,11 +12,14 @@ function TodoItem (props){
          props.adjustItem(itemIndex)
      // setState(prevValue => !prevValue)
     }
+    function deleting () {
+          props.deleting(itemIndex)
+    }
      return (
           <div>
                <p style={getStyles(done)}>
                     <input type="checkbox" onChange={adjustIt} checked={done} style={{marginRight:'5px'}}/>
-                    {allProps}</p>
+                    {allProps}<span className='closeBtn' onClick={deleting}>X</span></p>
           </div>
      )
 }
