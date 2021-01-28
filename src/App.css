@@ -2,10 +2,16 @@
   text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+h3.text-center {
+  color: #c52950 !important;
 }
-
+kbd{
+  background-color: #c52950 !important;
+  color: aliceblue;
+}
+button > kbd {
+  background-color: transparent;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

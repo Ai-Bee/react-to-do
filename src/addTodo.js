@@ -14,14 +14,14 @@ let TodoForm = (props) => {
      };
    
      return (
-       <form onSubmit={handleSubmit}>
+       <form onSubmit={handleSubmit} className='justify-content-center row my-4'>
          <input
            type="text"
-           className="input"
+           className="input col-sm-5 ml-4 mr-2"
            value={value}
            onChange={e => setValue(e.target.value)}
          />
-         <button type="submit" className="btn btn-lg">Add Item</button>
+         <button type="submit" className="btn btn-danger col-sm-2">Add Item</button>
        </form>
      );
    }

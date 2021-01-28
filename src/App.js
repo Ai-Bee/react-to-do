@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './App.css';
 import Todo from './Todo'
 import TodoForm from './addTodo'
 import FileHeader from './headerFile'
+import axios from 'axios'
 import About from './About'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
@@ -58,8 +59,8 @@ function App(props) {
         </div>
         <Route exact path="/" render={() => (
           <React.Fragment>
-            <TodoForm addTodo={addTodo} className="mx-auto"/>
-            <h4>These are the things to be done...</h4>
+            <TodoForm addTodo={addTodo}/>
+            <h4 className='my-4 p-4 text-center'>These are the things to be done...</h4>
             <Todo allItems={allItems} key={check} adjustItem={adjustItem} deleting={deleting} />
           </React.Fragment>
         )}>

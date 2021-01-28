@@ -16,10 +16,16 @@ function TodoItem (props){
           props.deleting(itemIndex)
     }
      return (
-          <div>
-               <p style={getStyles(done)}>
-                    <input type="checkbox" onChange={adjustIt} checked={done} style={{marginRight:'5px'}}/>
-                    {allProps}<span className='closeBtn' onClick={deleting}>X</span></p>
+          <div className='row justify-content-center'>
+               <div className="form-check col-sm-3">
+                    <label class="form-check-label p-2">
+                         <input className="form-check-input p-2 bg-danger" onChange={adjustIt}  type="checkbox" checked={done}/>
+                         <p style={getStyles(done)} className='col'>{allProps}</p>
+                    </label>
+               </div>
+               <button type="button" className="close mb-2" aria-label="Close" onClick={deleting}>
+                    <span aria-hidden="true">&times;</span>
+               </button>
           </div>
      )
 }
@@ -27,8 +33,7 @@ function TodoItem (props){
 let getStyles = (val) => {
      return {
           textDecoration: val?'line-through':'none',
-          padding: '13px',
-          backgroundColor: 'pink'
+          color: val?'crimson':'black',
      }
 }
 
