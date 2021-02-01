@@ -15,17 +15,19 @@ function TodoItem (props){
     function deleting () {
           props.deleting(itemIndex)
     }
+
      return (
-          <div className='row justify-content-center'>
-               <div className="form-check col-sm-3">
+          <div className='justify-content-center border border-right-0 border-left-0'>
+               <div className="form-check">
                     <label class="form-check-label p-2">
                          <input className="form-check-input p-2 bg-danger" onChange={adjustIt}  type="checkbox" checked={done}/>
-                         <p style={getStyles(done)} className='col'>{allProps}</p>
+                         <p style={getStyles(done)}>{allProps}</p>
                     </label>
-               </div>
-               <button type="button" className="close mb-2" aria-label="Close" onClick={deleting}>
+                    <button type="button" className="close" aria-label="Close" onClick={deleting}>
                     <span aria-hidden="true">&times;</span>
                </button>
+               </div>
+              
           </div>
      )
 }

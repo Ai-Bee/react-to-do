@@ -8,3 +8,8 @@
      cursor: pointer;
      content: 'X';
 }
+summary{
+     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+          monospace;
+     font-size: larger;
+}

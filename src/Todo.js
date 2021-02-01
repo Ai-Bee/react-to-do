@@ -14,7 +14,7 @@ function Todo (props){
 }
 
 Todo.propTypes = {
-     allItems: PropTypes.array.isRequired
+     allItems: PropTypes.array
 }
 
 export default Todo;
